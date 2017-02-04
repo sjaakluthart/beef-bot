@@ -1,7 +1,7 @@
 import uuid from 'uuid';
-import oneliners from '../oneliners.json';
-import store from '../store';
-import messageSend from '../actions/messages';
+import oneliners from './oneliners.json';
+import store from './store';
+import messageSend from './actions/messages';
 
 function sendBeefBotMessage() {
   const quote = oneliners[Math.floor(Math.random() * oneliners.length)];
