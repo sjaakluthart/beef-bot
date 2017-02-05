@@ -1,5 +1,5 @@
 import uuid from 'uuid';
-import { MESSAGE_SEND } from '../actions/types';
+import { MESSAGE_SEND, TYPING_SHOW, TYPING_HIDE } from '../actions/types';
 
 const INITIAL_STATE = {
   data: [{
@@ -17,6 +17,18 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state,
         data: [...state.data, action.payload]
+      };
+    }
+    case TYPING_SHOW: {
+      return {
+        ...state,
+        typing: true
+      };
+    }
+    case TYPING_HIDE: {
+      return {
+        ...state,
+        typing: false
       };
     }
     default: return state;
