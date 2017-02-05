@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "buildbranch": "^1.0.0",
     "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
@@ -29,7 +30,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build"
-  },
-  "homepage": "http://sjaakluthart.github.io/beef-bot"
+    "deploy": "npm run build && buildbranch gh-pages build beef-bot.nl"
+  }
 }
