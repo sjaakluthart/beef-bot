@@ -1,10 +1,13 @@
 import uuid from 'uuid';
+import Chance from 'chance';
 import oneliners from './oneliners.json';
 import store from './store';
 import { messageSend, typingShow, typingHide } from './actions/messages';
 
+const chance = new Chance();
+
 function sendBeefBotMessage() {
-  const quote = oneliners[Math.floor(Math.random() * oneliners.length)];
+  const quote = chance.pickone(oneliners);
 
   setTimeout(() => {
     store.dispatch(typingShow());

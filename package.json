@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "anchor-ui": "^1.9.6",
+    "chance": "^1.0.4",
     "classnames": "^2.2.5",
     "color": "^1.0.3",
     "emojione": "^2.2.7",
