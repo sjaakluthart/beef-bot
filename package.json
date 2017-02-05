@@ -30,6 +30,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && buildbranch gh-pages build beef-bot.nl"
+    "deploy": "npm run build && buildbranch gh-pages build www.beef-bot.nl"
   }
 }
