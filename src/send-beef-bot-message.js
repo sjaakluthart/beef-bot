@@ -5,10 +5,23 @@ import store from './store';
 import { messageSend, typingShow, typingHide } from './actions/messages';
 
 const chance = new Chance();
-const categories = ['filthy', 'life-lessons', 'qoutes'];
+const categories = ['filthy', 'life-lessons', 'quotes'];
 
-function sendBeefBotMessage() {
-  const category = chance.pickone(categories);
+function sendBeefBotMessage(message) {
+  let category = chance.pickone(categories);
+
+  if (message.includes('vunzig') || message.includes('vies') || message.includes('goor')) {
+    category = 'filthy';
+  }
+
+  if (message.includes('uitspraak') || message.includes('quote') || message.includes('citaat')) {
+    category = 'quotes';
+  }
+
+  if (message.includes('advies') || message.includes('les') || message.includes('raad')) {
+    category = 'life-lessons';
+  }
+
   const quote = chance.pickone(oneliners[category]);
 
   setTimeout(() => {
