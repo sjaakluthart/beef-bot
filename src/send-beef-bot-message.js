@@ -23,7 +23,7 @@ function sendBeefBotMessage() {
         createdAt: new Date(),
         id: uuid.v4()
       }));
-    }, quote.length * 40);
+    }, quote.length * 25);
   }, 500);
 }
 
