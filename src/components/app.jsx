@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { List, Message, MessageInput, Loader, withTheme, ChannelHeader } from 'anchor-ui';
+import { MessageList, Message, MessageInput, Loader, withTheme, ChannelHeader } from 'anchor-ui';
 import uuid from 'uuid';
 import { messageSend } from '../actions/messages';
 import beefBot from '../assets/images/beef-bot.jpg';
@@ -56,6 +56,8 @@ class App extends Component {
 
     sendBeefBotMessage();
 
+    this.messageList.scrollDown();
+
     return this.setState({
       message: ''
     });
@@ -71,22 +73,6 @@ class App extends Component {
     const { messages, typing } = this.props;
 
     const style = {
-      list: {
-        overflow: 'auto',
-        width: '100%',
-        height: 'auto',
-        maxHeight: '100%',
-        padding: '16px',
-        paddingBottom: '0',
-        background: 'none',
-        position: 'absolute',
-        bottom: '0',
-      },
-      messages: {
-        background: 'none',
-        height: 'calc(100% - 112px)',
-        position: 'relative'
-      },
       background: {
         backgroundImage: `url(${background})`,
         backgroundSize: '500px',
@@ -101,22 +87,16 @@ class App extends Component {
       <main className="app">
         <article className="chat-body" style={style.background}>
           <ChannelHeader name="BeefBot" />
-          <section style={style.messages}>
-            <List
-              listRef={messagesContainer => (this.messagesContainer = messagesContainer)}
-              style={style.list}
-            >
-              {messages.map(message => (
-                <Message
-                  message={message} key={`message-${message.id}`}
-                  myMessage={message.username !== 'BeefBot'}
-                  avatar={message.username === 'BeefBot' ? beefBot : chatBot}
-                  emoji
-                  enableLinks
-                />
-              ))}
-            </List>
-          </section>
+          <MessageList addRef={ref => (this.messageList = ref)} autoScroll>
+            {messages.map(message => (
+              <Message
+                message={message} key={`message-${message.id}`}
+                myMessage={message.username !== 'BeefBot'}
+                avatar={message.username === 'BeefBot' ? beefBot : chatBot}
+                emoji
+              />
+            ))}
+          </MessageList>
           {typing ? <div className="loader"><Loader /></div> : null}
           <MessageInput
             onChange={this.handleMessageChange}
