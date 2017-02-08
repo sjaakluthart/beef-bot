@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { MessageList, Message, MessageInput, Loader, withTheme, ChannelHeader } from 'anchor-ui';
 import uuid from 'uuid';
-import { messageSend } from '../actions/messages';
+import { messageSend, typingShow, typingHide } from '../actions/messages';
 import beefBot from '../assets/images/beef-bot.jpg';
 import chatBot from '../assets/images/chat-bot.jpg';
 import background from '../assets/images/channel-background.jpg';
@@ -12,6 +12,8 @@ import '../app.css';
 class App extends Component {
   static propTypes = {
     messageSend: PropTypes.func.isRequired,
+    typingShow: PropTypes.func.isRequired,
+    typingHide: PropTypes.func.isRequired,
     messages: PropTypes.arrayOf(Object).isRequired,
     typing: PropTypes.bool.isRequired
   }
@@ -26,6 +28,21 @@ class App extends Component {
     this.handleMessageSend = this.handleMessageSend.bind(this);
     this.handleMessageChange = this.handleMessageChange.bind(this);
     this.scrollDown = this.scrollDown.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.typingShow();
+
+    setTimeout(() => {
+      this.props.messageSend({
+        body: 'Wat wil je van me horen? Een uitspraak, wat goed advies of iets vunzigs?',
+        username: 'BeefBot',
+        createdAt: new Date(),
+        id: uuid.v4()
+      });
+
+      this.props.typingHide();
+    }, 1000);
   }
 
   componentDidUpdate() {
@@ -48,13 +65,13 @@ class App extends Component {
     }
 
     this.props.messageSend({
-      body: this.state.message,
+      body: message,
       username: 'Dikbil',
       createdAt: new Date(),
       id: uuid.v4()
     });
 
-    sendBeefBotMessage();
+    sendBeefBotMessage(message);
 
     this.messageList.scrollDown();
 
@@ -118,4 +135,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { messageSend })(withTheme(App, '#8991AF'));
+export default connect(mapStateToProps, { messageSend, typingShow, typingHide })(withTheme(App, '#8991AF'));
