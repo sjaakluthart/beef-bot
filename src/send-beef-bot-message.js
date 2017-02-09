@@ -8,17 +8,19 @@ const chance = new Chance();
 const categories = ['filthy', 'life-lessons', 'quotes'];
 
 function sendBeefBotMessage(message) {
+  const lowerCaseMessage = message.toLowerCase();
+
   let category = chance.pickone(categories);
 
-  if (message.includes('vunzig') || message.includes('vies') || message.includes('goor')) {
+  if (lowerCaseMessage.includes('vunzig') || lowerCaseMessage.includes('vies') || lowerCaseMessage.includes('goor')) {
     category = 'filthy';
   }
 
-  if (message.includes('uitspraak') || message.includes('quote') || message.includes('citaat')) {
+  if (lowerCaseMessage.includes('uitspraak') || lowerCaseMessage.includes('quote') || lowerCaseMessage.includes('citaat')) {
     category = 'quotes';
   }
 
-  if (message.includes('advies') || message.includes('les') || message.includes('raad')) {
+  if (lowerCaseMessage.includes('advies') || lowerCaseMessage.includes('les') || lowerCaseMessage.includes('raad')) {
     category = 'life-lessons';
   }
 
