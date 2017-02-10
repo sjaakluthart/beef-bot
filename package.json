@@ -13,7 +13,7 @@
     "react-scripts": "0.8.5"
   },
   "dependencies": {
-    "anchor-ui": "^1.11.0",
+    "anchor-ui": "^2.0.4",
     "chance": "^1.0.4",
     "classnames": "^2.2.5",
     "color": "^1.0.3",

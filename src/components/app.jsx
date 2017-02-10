@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import MessageList from 'anchor-ui/dist/components/message-list';
-import Message from 'anchor-ui/dist/components/message';
-import MessageInput from 'anchor-ui/dist/components/message-input';
-import Loader from 'anchor-ui/dist/components/loader';
-import withTheme from 'anchor-ui/dist/with-theme';
-import ChannelHeader from 'anchor-ui/dist/components/channel-header';
+import MessageList from 'anchor-ui/message-list';
+import Message from 'anchor-ui/message';
+import MessageInput from 'anchor-ui/message-input';
+import Loader from 'anchor-ui/loader';
+import withTheme from 'anchor-ui/with-theme';
+import ChannelHeader from 'anchor-ui/channel-header';
 import uuid from 'uuid';
 import { messageSend, typingShow, typingHide } from '../actions/messages';
 import beefBot from '../assets/images/beef-bot.jpg';
