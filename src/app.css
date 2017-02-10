@@ -48,3 +48,7 @@
     max-width: 750px;
   }
 }
+
+ul {
+  -webkit-overflow-scrolling: touch;
+}
