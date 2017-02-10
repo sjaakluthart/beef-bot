@@ -14,8 +14,6 @@
   justify-content: center;
   flex-direction: column;
   box-sizing: border-box;
-  background: linear-gradient(223deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url('./assets/images/background.jpg');
-  background-size: cover;
 }
 
 .chat-body {
@@ -29,6 +27,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .app {
+    background: linear-gradient(223deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url('./assets/images/background.jpg');
+    background-size: cover;
+  }
+
   .chat-body {
     width: 90%;
     height: 80%;
