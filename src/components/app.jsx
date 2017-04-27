@@ -4,7 +4,6 @@ import MessageList from 'anchor-ui/message-list';
 import Message from 'anchor-ui/message';
 import MessageInput from 'anchor-ui/message-input';
 import Loader from 'anchor-ui/loader';
-import withTheme from 'anchor-ui/with-theme';
 import ChannelHeader from 'anchor-ui/channel-header';
 import uuid from 'uuid';
 import { messageSend, typingShow, typingHide } from '../actions/messages';
@@ -122,7 +121,7 @@ class App extends Component {
           {typing ? <div className="loader"><Loader /></div> : null}
           <MessageInput
             onChange={this.handleMessageChange}
-            placeholder="Type something..."
+            placeholder="Type een bericht..."
             value={this.state.message}
             sendMessage={this.handleMessageSend}
             style={style.input}
@@ -140,4 +139,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { messageSend, typingShow, typingHide })(withTheme(App, '#8991AF'));
+export default connect(mapStateToProps, { messageSend, typingShow, typingHide })(App);
