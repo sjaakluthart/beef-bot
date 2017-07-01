@@ -22,8 +22,11 @@
   height: 100%;
 }
 
-.emojione {
-  width: 32px;
+.small .emojione {
+  width: 24px;
+  height: 24px;
+  margin: 0 2.5px;
+  transform: translateY(4px);
 }
 
 @media screen and (min-width: 768px) {
