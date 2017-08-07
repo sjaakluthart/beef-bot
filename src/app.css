@@ -30,12 +30,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .app {
-    background: url('./assets/images/beef-bot.jpg');
-    background-repeat: repeat;
-    background-size: 150px;
-  }
-
   .chat-body {
     width: 90%;
     height: 80%;
