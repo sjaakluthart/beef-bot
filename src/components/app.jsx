@@ -88,7 +88,8 @@ class App extends Component {
     this.messageList.scrollDown();
 
     return this.setState({
-      message: ''
+      message: '',
+      open: false
     });
   }
 
