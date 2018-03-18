@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import MessageList from 'anchor-ui/message-list';
 import Message from 'anchor-ui/message';
 import MessageInput from 'anchor-ui/message-input';
@@ -8,16 +7,12 @@ import ChannelHeader from 'anchor-ui/channel-header';
 import EmojiMenu from 'anchor-ui/emoji-menu';
 import Button from 'anchor-ui/button';
 import IconEmoji from 'anchor-ui/icons/icon-emoji';
-import styles from 'anchor-ui/settings/styles';
 import uuid from 'uuid';
 import map from 'lodash/map';
 import format from 'date-fns/format';
-import { messageSend, typingShow, typingHide, sendBeefBotMessage } from '../actions/messages';
-import beefBot from '../assets/images/beef-bot.jpg';
-import chatBot from '../assets/images/chat-bot.jpg';
-import background from '../assets/images/channel-background.jpg';
-import UserStatus from './user-status';
-import '../app.css';
+import beefBot from '../../assets/images/beef-bot.jpg';
+import chatBot from '../../assets/images/chat-bot.jpg';
+import UserStatus from '../user-status';
 
 const propTypes = {
   messageSend: PropTypes.func.isRequired,
@@ -25,7 +20,13 @@ const propTypes = {
   typingHide: PropTypes.func.isRequired,
   sendBeefBotMessage: PropTypes.func.isRequired,
   messages: PropTypes.arrayOf(Object).isRequired,
-  typing: PropTypes.bool.isRequired
+  typing: PropTypes.bool.isRequired,
+  style: PropTypes.shape({
+    background: PropTypes.object.isRequired,
+    input: PropTypes.object.isRequired,
+    messages: PropTypes.object.isRequired,
+    emojiMenu: PropTypes.object.isRequired,
+  }).isRequired
 };
 
 class App extends Component {
@@ -124,28 +125,7 @@ class App extends Component {
   }
 
   render() {
-    const { messages, typing } = this.props;
-
-    const style = {
-      background: {
-        backgroundImage: `url(${background})`,
-        backgroundSize: '500px',
-        position: 'relative',
-        boxShadow: styles.depthShadows[0]
-      },
-      input: {
-        width: 'calc(100% - 32px)'
-      },
-      messages: {
-        height: 'calc(100% - 124px)'
-      },
-      emojiMenu: {
-        width: 'calc(100% - 32px)',
-        position: 'absolute',
-        bottom: '80px',
-        left: '16px'
-      }
-    };
+    const { messages, typing, style } = this.props;
 
     return (
       <main className="app">
@@ -203,19 +183,4 @@ class App extends Component {
 
 App.propTypes = propTypes;
 
-function mapStateToProps(state) {
-  return {
-    messages: state.messages.data,
-    typing: state.messages.typing
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  {
-    messageSend,
-    typingShow,
-    typingHide,
-    sendBeefBotMessage
-  }
-)(App);
+export default App;
