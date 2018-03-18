@@ -8,6 +8,7 @@ import { StyleRoot } from 'radium';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store';
 import App from './components/app';
+import './css/meyer-reset.css';
 import './index.css';
 import './app.css';
 
