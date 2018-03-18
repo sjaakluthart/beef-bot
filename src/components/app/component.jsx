@@ -30,63 +30,44 @@ const propTypes = {
 };
 
 class App extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      message: '',
-      open: false
-    };
-
-    this.handleMessageSend = this.handleMessageSend.bind(this);
-    this.handleMessageChange = this.handleMessageChange.bind(this);
-    this.scrollDown = this.scrollDown.bind(this);
-    this.toggleEmojiMenu = this.toggleEmojiMenu.bind(this);
-    this.sendEmoji = this.sendEmoji.bind(this);
+  state = {
+    message: '',
+    open: false
   }
 
   componentDidMount() {
-    this.props.typingShow();
+    const { typingShow, typingHide, messageSend } = this.props;
+
+    typingShow();
 
     setTimeout(() => {
-      this.props.messageSend({
+      messageSend({
         body: 'Wat wil je van me horen? Een uitspraak, wat goed advies of iets vunzigs?',
         username: 'BeefBot',
         createdAt: new Date(),
         id: uuid.v4()
       });
 
-      this.props.typingHide();
+      typingHide();
     }, 1000);
   }
 
-  componentDidUpdate() {
-    this.scrollDown();
-  }
-
-  scrollDown() {
-    setTimeout(() => {
-      if (this.messagesContainer) {
-        this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
-      }
-    }, 100);
-  }
-
-  handleMessageSend() {
+  handleMessageSend = () => {
     const { message } = this.state;
+    const { messageSend, sendBeefBotMessage } = this.props;
 
     if (!message) {
       return false;
     }
 
-    this.props.messageSend({
+    messageSend({
       body: message,
       username: 'Dikbil',
       createdAt: new Date(),
       id: uuid.v4()
     });
 
-    this.props.sendBeefBotMessage(message);
+    sendBeefBotMessage(message);
 
     this.messageList.scrollToBottom();
 
@@ -96,19 +77,19 @@ class App extends Component {
     });
   }
 
-  handleMessageChange(event) {
+  handleMessageChange = (event) => {
     this.setState({
       message: event.currentTarget.value
     });
   }
 
-  toggleEmojiMenu() {
+  toggleEmojiMenu = () => {
     this.setState({
       open: !this.state.open
     });
   }
 
-  sendEmoji(event, emoji) {
+  handleEmojiSend = (event, emoji) => {
     const { message } = this.state;
 
     let messageWithEmoji = emoji.shortname;
@@ -141,7 +122,7 @@ class App extends Component {
           >
             {map(messages, message => (
               <Message
-                key={`message-${message.id}`}
+                key={message.id}
                 body={message.body}
                 type={message.type}
                 createdAt={format(message.createdAt, 'HH:mm')}
@@ -155,7 +136,7 @@ class App extends Component {
           <EmojiMenu
             open={this.state.open}
             hideMenu={this.toggleEmojiMenu}
-            sendEmoji={this.sendEmoji}
+            sendEmoji={this.handleEmojiSend}
             style={style.emojiMenu}
           />
           <MessageInput
