@@ -12,11 +12,10 @@ import styles from 'anchor-ui/settings/styles';
 import uuid from 'uuid';
 import map from 'lodash/map';
 import format from 'date-fns/format';
-import { messageSend, typingShow, typingHide } from '../actions/messages';
+import { messageSend, typingShow, typingHide, sendBeefBotMessage } from '../actions/messages';
 import beefBot from '../assets/images/beef-bot.jpg';
 import chatBot from '../assets/images/chat-bot.jpg';
 import background from '../assets/images/channel-background.jpg';
-import sendBeefBotMessage from '../send-beef-bot-message';
 import UserStatus from './user-status';
 import '../app.css';
 
@@ -24,6 +23,7 @@ const propTypes = {
   messageSend: PropTypes.func.isRequired,
   typingShow: PropTypes.func.isRequired,
   typingHide: PropTypes.func.isRequired,
+  sendBeefBotMessage: PropTypes.func.isRequired,
   messages: PropTypes.arrayOf(Object).isRequired,
   typing: PropTypes.bool.isRequired
 };
@@ -85,7 +85,7 @@ class App extends Component {
       id: uuid.v4()
     });
 
-    sendBeefBotMessage(message);
+    this.props.sendBeefBotMessage(message);
 
     this.messageList.scrollToBottom();
 
@@ -210,4 +210,12 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { messageSend, typingShow, typingHide })(App);
+export default connect(
+  mapStateToProps,
+  {
+    messageSend,
+    typingShow,
+    typingHide,
+    sendBeefBotMessage
+  }
+)(App);
