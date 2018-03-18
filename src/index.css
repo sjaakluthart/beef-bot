@@ -1,16 +1,4 @@
-@font-face {
-  font-family: 'Lato';
-  src: url('./assets/fonts/Lato/Lato-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('./assets/fonts/Lato/Lato-Light.ttf');
-  font-weight: 100;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 
 html {
   background: hotpink;
