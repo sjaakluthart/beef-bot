@@ -1,3 +1,7 @@
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 .loader {
   width: 75px;
   position: absolute;
@@ -34,19 +38,10 @@
     width: 90%;
     height: 80%;
     border-radius: 3px;
+    max-width: 750px;
   }
 
   header {
     border-radius: 3px 3px 0 0;
   }
-}
-
-@media screen and (min-width: 960px) {
-  .chat-body {
-    max-width: 750px;
-  }
-}
-
-ul {
-  -webkit-overflow-scrolling: touch;
 }
