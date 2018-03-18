@@ -10,6 +10,8 @@ import Button from 'anchor-ui/button';
 import IconEmoji from 'anchor-ui/icons/icon-emoji';
 import styles from 'anchor-ui/settings/styles';
 import uuid from 'uuid';
+import map from 'lodash/map';
+import format from 'date-fns/format';
 import { messageSend, typingShow, typingHide } from '../actions/messages';
 import beefBot from '../assets/images/beef-bot.jpg';
 import chatBot from '../assets/images/chat-bot.jpg';
@@ -85,7 +87,7 @@ class App extends Component {
 
     sendBeefBotMessage(message);
 
-    this.messageList.scrollDown();
+    this.messageList.scrollToBottom();
 
     return this.setState({
       message: '',
@@ -152,11 +154,18 @@ class App extends Component {
             name="BeefBot"
             secondaryText={typing ? 'aan het typen...' : <UserStatus status="online" />}
           />
-          <MessageList addRef={ref => (this.messageList = ref)} autoScroll style={style.messages}>
-            {messages.map(message => (
+          <MessageList
+            ref={(node) => { this.messageList = node; }}
+            autoScroll
+            style={style.messages}
+          >
+            {map(messages, message => (
               <Message
                 key={`message-${message.id}`}
-                message={message}
+                body={message.body}
+                type={message.type}
+                createdAt={format(message.createdAt, 'HH:mm')}
+                username={message.username}
                 myMessage={message.username !== 'BeefBot'}
                 avatar={message.username === 'BeefBot' ? beefBot : chatBot}
                 emoji
@@ -184,7 +193,7 @@ class App extends Component {
                 <IconEmoji />
               </Button>
             }
-            inputRef={node => (this.input = node)}
+            inputRef={(node) => { this.input = node; }}
           />
         </article>
       </main>

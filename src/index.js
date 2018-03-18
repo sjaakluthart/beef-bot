@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import emojione from 'emojione';
 import ThemeProvider from 'anchor-ui/theme-provider';
 import { StyleRoot } from 'radium';
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 import store from './store';
 import App from './components/app';
 import './index.css';
@@ -23,4 +23,4 @@ ReactDOM.render(
   </StyleRoot>,
   document.getElementById('root')
 );
-// registerServiceWorker();
+registerServiceWorker();

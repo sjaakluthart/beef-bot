@@ -1,5 +1,7 @@
 import uuid from 'uuid';
 import Chance from 'chance';
+import toLower from 'lodash/toLower';
+import includes from 'lodash/includes';
 import oneliners from './oneliners.json';
 import store from './store';
 import { messageSend, typingShow, typingHide } from './actions/messages';
@@ -8,19 +10,31 @@ const chance = new Chance();
 const categories = ['filthy', 'life-lessons', 'quotes'];
 
 function sendBeefBotMessage(message) {
-  const lowerCaseMessage = message.toLowerCase();
+  const lowerCaseMessage = toLower(message);
 
   let category = chance.pickone(categories);
 
-  if (lowerCaseMessage.includes('vunzig') || lowerCaseMessage.includes('vies') || lowerCaseMessage.includes('goor')) {
+  if (
+    includes(lowerCaseMessage, 'vunzig') ||
+    includes(lowerCaseMessage, 'vies') ||
+    includes(lowerCaseMessage, 'goor')
+  ) {
     category = 'filthy';
   }
 
-  if (lowerCaseMessage.includes('uitspraak') || lowerCaseMessage.includes('quote') || lowerCaseMessage.includes('citaat')) {
+  if (
+    includes(lowerCaseMessage, 'uitspraak') ||
+    includes(lowerCaseMessage, 'quote') ||
+    includes(lowerCaseMessage, 'citaat')
+  ) {
     category = 'quotes';
   }
 
-  if (lowerCaseMessage.includes('advies') || lowerCaseMessage.includes('les') || lowerCaseMessage.includes('raad')) {
+  if (
+    includes(lowerCaseMessage, 'advies') ||
+    includes(lowerCaseMessage, 'les') ||
+    includes(lowerCaseMessage, 'raad')
+  ) {
     category = 'life-lessons';
   }
 
