@@ -9,8 +9,8 @@ import registerServiceWorker from './registerServiceWorker';
 import store from './store';
 import App from './components/app';
 import './css/meyer-reset.css';
-import './index.css';
-import './app.css';
+import './css/index.css';
+import './css/app.css';
 
 emojione.ascii = true;
 emojione.imagePathPNG = 'https://cdn.jsdelivr.net/emojione/assets/3.0/png/64/';
