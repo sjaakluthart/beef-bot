@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b071a7bb42d0cb999be890130aeb9a68",
+    "revision": "c2b952367761dfcb1098d21dd3d6630b",
     "url": "/beef-bot/index.html"
   },
   {
-    "revision": "ef9ec413724808473642",
+    "revision": "e1fe470d731fb08cccac",
     "url": "/beef-bot/static/css/main.c04d51b6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beef-bot/static/js/2.fcca6463.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ef9ec413724808473642",
-    "url": "/beef-bot/static/js/main.0d53d3ad.chunk.js"
+    "revision": "e1fe470d731fb08cccac",
+    "url": "/beef-bot/static/js/main.eb72c8d3.chunk.js"
   },
   {
     "revision": "6d2f1792777b9ad2a787",

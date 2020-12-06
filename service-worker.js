@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/beef-bot/precache-manifest.03bc34b93a7cabfe696c039b749217c5.js"
+  "/beef-bot/precache-manifest.18bcee0c9da4dffa5fa42e7e858c5e77.js"
 );
 
 self.addEventListener('message', (event) => {

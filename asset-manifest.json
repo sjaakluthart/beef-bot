@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/beef-bot/static/css/main.c04d51b6.chunk.css",
-    "main.js": "/beef-bot/static/js/main.0d53d3ad.chunk.js",
-    "main.js.map": "/beef-bot/static/js/main.0d53d3ad.chunk.js.map",
+    "main.js": "/beef-bot/static/js/main.eb72c8d3.chunk.js",
+    "main.js.map": "/beef-bot/static/js/main.eb72c8d3.chunk.js.map",
     "runtime-main.js": "/beef-bot/static/js/runtime-main.1329c76b.js",
     "runtime-main.js.map": "/beef-bot/static/js/runtime-main.1329c76b.js.map",
     "static/js/2.fcca6463.chunk.js": "/beef-bot/static/js/2.fcca6463.chunk.js",
     "static/js/2.fcca6463.chunk.js.map": "/beef-bot/static/js/2.fcca6463.chunk.js.map",
     "index.html": "/beef-bot/index.html",
-    "precache-manifest.03bc34b93a7cabfe696c039b749217c5.js": "/beef-bot/precache-manifest.03bc34b93a7cabfe696c039b749217c5.js",
+    "precache-manifest.18bcee0c9da4dffa5fa42e7e858c5e77.js": "/beef-bot/precache-manifest.18bcee0c9da4dffa5fa42e7e858c5e77.js",
     "service-worker.js": "/beef-bot/service-worker.js",
     "static/css/main.c04d51b6.chunk.css.map": "/beef-bot/static/css/main.c04d51b6.chunk.css.map",
     "static/js/2.fcca6463.chunk.js.LICENSE.txt": "/beef-bot/static/js/2.fcca6463.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.1329c76b.js",
     "static/js/2.fcca6463.chunk.js",
     "static/css/main.c04d51b6.chunk.css",
-    "static/js/main.0d53d3ad.chunk.js"
+    "static/js/main.eb72c8d3.chunk.js"
   ]
 }
