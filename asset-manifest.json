@@ -1,8 +1,25 @@
 {
-  "main.css": "static/css/main.6536d115.css",
-  "main.css.map": "static/css/main.6536d115.css.map",
-  "main.js": "static/js/main.1eea8a0d.js",
-  "main.js.map": "static/js/main.1eea8a0d.js.map",
-  "static/media/beef-bot.jpg": "static/media/beef-bot.f58e467b.jpg",
-  "static/media/channel-background.jpg": "static/media/channel-background.792eb2c3.jpg"
+  "files": {
+    "main.css": "/static/css/main.c04d51b6.chunk.css",
+    "main.js": "/static/js/main.fdb81e2e.chunk.js",
+    "main.js.map": "/static/js/main.fdb81e2e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.42cff086.js",
+    "runtime-main.js.map": "/static/js/runtime-main.42cff086.js.map",
+    "static/js/2.fcca6463.chunk.js": "/static/js/2.fcca6463.chunk.js",
+    "static/js/2.fcca6463.chunk.js.map": "/static/js/2.fcca6463.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c6945b666133d7eb9ad0ecc069687f4f.js": "/precache-manifest.c6945b666133d7eb9ad0ecc069687f4f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c04d51b6.chunk.css.map": "/static/css/main.c04d51b6.chunk.css.map",
+    "static/js/2.fcca6463.chunk.js.LICENSE.txt": "/static/js/2.fcca6463.chunk.js.LICENSE.txt",
+    "static/media/beef-bot.jpg": "/static/media/beef-bot.f58e467b.jpg",
+    "static/media/send-accent.svg": "/static/media/send-accent.5a1593c0.svg",
+    "static/media/send.svg": "/static/media/send.56bc1a62.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42cff086.js",
+    "static/js/2.fcca6463.chunk.js",
+    "static/css/main.c04d51b6.chunk.css",
+    "static/js/main.fdb81e2e.chunk.js"
+  ]
 }
