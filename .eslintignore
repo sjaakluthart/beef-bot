@@ -1,5 +1,0 @@
-**/*.test.*
-**/*.tests.*
-dist
-test
-registerServiceWorker.js

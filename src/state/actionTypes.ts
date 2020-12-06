@@ -1,0 +1,7 @@
+const TYPING_SET = 'TYPING_SET';
+const MESSAGE_ADD = 'MESSAGE_ADD';
+
+export {
+  TYPING_SET,
+  MESSAGE_ADD,
+};

@@ -1,19 +1,140 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+:root {
+  --primary: #77B4E4;
+  --light-primary: #D4E8F7;
+  --white: #FEFEFE;
+  --black: #2E2E2E;
+  --gray: #808080;
+  --paper-1: rgba(21, 21, 21, 0.12) 0px 1px 6px, rgba(21, 21, 21, 0.12) 0px 1px 4px;
+  --paper-2: rgba(21, 21, 21, 0.16) 0px 3px 10px, rgba(21, 21, 21, 0.23) 0px 3px 10px;
+}
 
 html {
-  background: hotpink;
+  background: var(--light-primary);
   height: 100%;
+  overflow: hidden;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  height: inherit;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 16px;
 }
 
-#root,
+html,
+body,
+#root {
+  height: 100%;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+  border: 0;
+  outline: none;
+  background: none;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 17px;
+}
+
 main {
-  height: inherit;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.app {
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--paper-1);
+}
+
+header {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 22px;
+  margin-right: 8px;
+}
+
+header h1 {
+  margin-bottom: 4px;
+}
+
+header h2 {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.messages {
+  flex: 1;
+  background: var(--primary);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.messages > section {
+  padding: 10px 16px 6px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.message {
+  padding: 10px 12px 10px 12px;
+  background-color: var(--white);
+  max-width: 432px;
+  margin-bottom: 4px;
+  align-self: flex-start;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.message.right {
+  background-color: var(--light-primary);
+  align-self: flex-end;
+}
+
+.message span:last-child {
+  font-size: 12px;
+  padding-left: 12px;
+  color: var(--gray);
+  position: relative;
+  top: 8px;
+  left: 6px;
+  float: right;
+}
+
+@media screen and (min-width: 768px) {
+  .app {
+    width: 90%;
+    height: 80%;
+    border-radius: 3px;
+    max-width: 750px;
+  }
 }

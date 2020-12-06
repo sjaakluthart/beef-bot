@@ -1,0 +1,17 @@
+.message-input {
+  display: flex;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 0 16px;
+  color: var(--black);
+}
+
+.message-input button {
+  padding: 8px;
+}
+
+.message-input img {
+  display: block;
+}
