@@ -2,6 +2,8 @@ import React, {
   useLayoutEffect,
   useState,
   useReducer,
+  useEffect,
+  useRef,
 } from 'react';
 import map from 'lodash/map';
 import format from 'date-fns/format';
@@ -9,12 +11,14 @@ import classNames from 'classnames';
 
 import MessageInput from './MessageInput';
 import getBotResponse from '../utils/getBotResponse';
+import shouldScrollToBottom from '../utils/shouldScrollToBottom';
 import beefBot from '../assets/beef-bot.jpg';
 import reducer, { actions, initialState } from '../state';
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [body, setBody] = useState('');
+  const messagesRef = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
     dispatch(actions.typingSet(true));
@@ -55,6 +59,18 @@ const App = () => {
     }, 500);
   };
 
+  useEffect(() => {
+    if (messagesRef && messagesRef.current) {
+      const { scrollHeight, scrollTop, offsetHeight } = messagesRef.current;
+
+      const shouldScroll = shouldScrollToBottom(scrollHeight, scrollTop, offsetHeight);
+
+      if (shouldScroll) {
+        messagesRef.current.scrollTop = scrollHeight;
+      }
+    }
+  }, [state.messages]);
+
   return (
     <main>
       <section className="app">
@@ -66,7 +82,7 @@ const App = () => {
           </section>
         </header>
         <section className="messages">
-          <section>
+          <section ref={messagesRef}>
             {map(state.messages, (message, index) => (
               <section className={classNames('message', { right: !message.bot })} key={index}>
                 <p>
