@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/sjaakluthart.github.io/beef-bot/static/css/main.c04d51b6.chunk.css",
-    "main.js": "/sjaakluthart.github.io/beef-bot/static/js/main.e910b3bc.chunk.js",
-    "main.js.map": "/sjaakluthart.github.io/beef-bot/static/js/main.e910b3bc.chunk.js.map",
-    "runtime-main.js": "/sjaakluthart.github.io/beef-bot/static/js/runtime-main.4f0a9acc.js",
-    "runtime-main.js.map": "/sjaakluthart.github.io/beef-bot/static/js/runtime-main.4f0a9acc.js.map",
-    "static/js/2.fcca6463.chunk.js": "/sjaakluthart.github.io/beef-bot/static/js/2.fcca6463.chunk.js",
-    "static/js/2.fcca6463.chunk.js.map": "/sjaakluthart.github.io/beef-bot/static/js/2.fcca6463.chunk.js.map",
-    "index.html": "/sjaakluthart.github.io/beef-bot/index.html",
-    "precache-manifest.10c0a2b76e2de852b4a85b630751c952.js": "/sjaakluthart.github.io/beef-bot/precache-manifest.10c0a2b76e2de852b4a85b630751c952.js",
-    "service-worker.js": "/sjaakluthart.github.io/beef-bot/service-worker.js",
-    "static/css/main.c04d51b6.chunk.css.map": "/sjaakluthart.github.io/beef-bot/static/css/main.c04d51b6.chunk.css.map",
-    "static/js/2.fcca6463.chunk.js.LICENSE.txt": "/sjaakluthart.github.io/beef-bot/static/js/2.fcca6463.chunk.js.LICENSE.txt",
-    "static/media/beef-bot.jpg": "/sjaakluthart.github.io/beef-bot/static/media/beef-bot.f58e467b.jpg",
-    "static/media/send-accent.svg": "/sjaakluthart.github.io/beef-bot/static/media/send-accent.5a1593c0.svg",
-    "static/media/send.svg": "/sjaakluthart.github.io/beef-bot/static/media/send.56bc1a62.svg"
+    "main.css": "/beef-bot/static/css/main.c04d51b6.chunk.css",
+    "main.js": "/beef-bot/static/js/main.0d53d3ad.chunk.js",
+    "main.js.map": "/beef-bot/static/js/main.0d53d3ad.chunk.js.map",
+    "runtime-main.js": "/beef-bot/static/js/runtime-main.1329c76b.js",
+    "runtime-main.js.map": "/beef-bot/static/js/runtime-main.1329c76b.js.map",
+    "static/js/2.fcca6463.chunk.js": "/beef-bot/static/js/2.fcca6463.chunk.js",
+    "static/js/2.fcca6463.chunk.js.map": "/beef-bot/static/js/2.fcca6463.chunk.js.map",
+    "index.html": "/beef-bot/index.html",
+    "precache-manifest.03bc34b93a7cabfe696c039b749217c5.js": "/beef-bot/precache-manifest.03bc34b93a7cabfe696c039b749217c5.js",
+    "service-worker.js": "/beef-bot/service-worker.js",
+    "static/css/main.c04d51b6.chunk.css.map": "/beef-bot/static/css/main.c04d51b6.chunk.css.map",
+    "static/js/2.fcca6463.chunk.js.LICENSE.txt": "/beef-bot/static/js/2.fcca6463.chunk.js.LICENSE.txt",
+    "static/media/beef-bot.jpg": "/beef-bot/static/media/beef-bot.f58e467b.jpg",
+    "static/media/send-accent.svg": "/beef-bot/static/media/send-accent.5a1593c0.svg",
+    "static/media/send.svg": "/beef-bot/static/media/send.56bc1a62.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f0a9acc.js",
+    "static/js/runtime-main.1329c76b.js",
     "static/js/2.fcca6463.chunk.js",
     "static/css/main.c04d51b6.chunk.css",
-    "static/js/main.e910b3bc.chunk.js"
+    "static/js/main.0d53d3ad.chunk.js"
   ]
 }
