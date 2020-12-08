@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/beef-bot/static/css/main.c04d51b6.chunk.css",
-    "main.js": "/beef-bot/static/js/main.eb72c8d3.chunk.js",
-    "main.js.map": "/beef-bot/static/js/main.eb72c8d3.chunk.js.map",
-    "runtime-main.js": "/beef-bot/static/js/runtime-main.1329c76b.js",
-    "runtime-main.js.map": "/beef-bot/static/js/runtime-main.1329c76b.js.map",
-    "static/js/2.fcca6463.chunk.js": "/beef-bot/static/js/2.fcca6463.chunk.js",
-    "static/js/2.fcca6463.chunk.js.map": "/beef-bot/static/js/2.fcca6463.chunk.js.map",
-    "index.html": "/beef-bot/index.html",
-    "precache-manifest.18bcee0c9da4dffa5fa42e7e858c5e77.js": "/beef-bot/precache-manifest.18bcee0c9da4dffa5fa42e7e858c5e77.js",
-    "service-worker.js": "/beef-bot/service-worker.js",
-    "static/css/main.c04d51b6.chunk.css.map": "/beef-bot/static/css/main.c04d51b6.chunk.css.map",
-    "static/js/2.fcca6463.chunk.js.LICENSE.txt": "/beef-bot/static/js/2.fcca6463.chunk.js.LICENSE.txt",
-    "static/media/beef-bot.jpg": "/beef-bot/static/media/beef-bot.f58e467b.jpg",
-    "static/media/send-accent.svg": "/beef-bot/static/media/send-accent.5a1593c0.svg",
-    "static/media/send.svg": "/beef-bot/static/media/send.56bc1a62.svg"
+    "main.css": "/static/css/main.c04d51b6.chunk.css",
+    "main.js": "/static/js/main.29e3870a.chunk.js",
+    "main.js.map": "/static/js/main.29e3870a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.42cff086.js",
+    "runtime-main.js.map": "/static/js/runtime-main.42cff086.js.map",
+    "static/js/2.fcca6463.chunk.js": "/static/js/2.fcca6463.chunk.js",
+    "static/js/2.fcca6463.chunk.js.map": "/static/js/2.fcca6463.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.debd6b377c4c250c9356a8b7cd7ac567.js": "/precache-manifest.debd6b377c4c250c9356a8b7cd7ac567.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c04d51b6.chunk.css.map": "/static/css/main.c04d51b6.chunk.css.map",
+    "static/js/2.fcca6463.chunk.js.LICENSE.txt": "/static/js/2.fcca6463.chunk.js.LICENSE.txt",
+    "static/media/beef-bot.jpg": "/static/media/beef-bot.f58e467b.jpg",
+    "static/media/send-accent.svg": "/static/media/send-accent.5a1593c0.svg",
+    "static/media/send.svg": "/static/media/send.56bc1a62.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1329c76b.js",
+    "static/js/runtime-main.42cff086.js",
     "static/js/2.fcca6463.chunk.js",
     "static/css/main.c04d51b6.chunk.css",
-    "static/js/main.eb72c8d3.chunk.js"
+    "static/js/main.29e3870a.chunk.js"
   ]
 }
